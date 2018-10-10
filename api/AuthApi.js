@@ -22,7 +22,10 @@ const router = require("express").Router(),
 */
 router.post("/login", (request, response) => {
  
-validateLoginCredentials(request.body)
+/*
+    Authenticates user by passing the request.body to the validateLoginCredentials function
+*/
+ validateLoginCredentials(request.body)
     .then(data => response.status(200).json(data))
     .catch(error => response.status(400).json(error));
       
@@ -36,7 +39,10 @@ validateLoginCredentials(request.body)
 */
 router.post("/signup", (request, response) => {
 
-    // checks to see if user put in valid input data
+    /*
+        Passes the request.body to the checkLoginCredentials to make sure user actually send filled out inputs
+        Then if the checkLoginCredentials function returns true, we send the request.body to the registerUser function to create a new user
+    */
     if(checkLoginCredentials(request.body)) {
         registerUser(request.body)
             .then(token => response.status(200).json(token))

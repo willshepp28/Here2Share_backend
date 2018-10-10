@@ -11,10 +11,3 @@ exports.seed = function(knex, Promise) {
 };
 
 
-
- // table.increments();
-            // table.string("product_name").notNullable();
-            // table.text("product_image").notNullable();
-            // table.integer("price").notNullable();
-            // table.integer("userId").unsigned().references("id").inTable("users");
-            // table.integer("categoryId").unsigned().references("id").inTable("categories");

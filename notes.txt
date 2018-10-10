@@ -27,3 +27,7 @@ https://www.terlici.com/2014/08/25/best-practices-express-structure.html
 
 // Site design
 https://dribbble.com/shots/5254140-Booking-Hotel-App-Clean-Minimalism
+https://dribbble.com/shots/5357132-Property-Finder-Website-Version2
+https://dribbble.com/shots/2595125-Voorooms-Landing-page
+https://dribbble.com/shots/3864923-Furniture-Sales-Flyer-Template
+https://dribbble.com/shots/3892404-terhie-calendar-and-login    - (login/signup)
