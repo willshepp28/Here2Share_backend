@@ -1,0 +1,9 @@
+// queries.js 
+https://github.com/Subtlesnow/cars_db
+
+// Calendar 
+https://www.primefaces.org/primeng/#/calendar
+
+// PostgreSQL tutorials 
+http://www.postgresqltutorial.com/
+

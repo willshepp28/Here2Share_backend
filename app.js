@@ -2,6 +2,7 @@ const express = require("express"),
     bodyParser = require("body-parser"),
     morgan = require("morgan"),
     dotenv = require("dotenv"),
+    compression = require("compression"),
     cors = require("cors"),
     Api = require("./api/Api"),
     port = process.env.PORT || 3000;

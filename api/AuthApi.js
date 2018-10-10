@@ -11,23 +11,22 @@ const router = require("express").Router(),
 
 /*
 |--------------------------------------------------------------------------
-|  Home page - This is the home page
+|  Login Api - Page where users login 
 |--------------------------------------------------------------------------
 */
-
-router.get("/", async(request, response) => {
+router.post("/login", (request, response) => {
     
-    const user = await knex("users")
-        .join("address", 1, "address.userId")
-        .then(user => {
-            response.status(200).json(user);
-        })
-        .catch(error => console.log(error));    
-
 });
 
 
-
+/*
+|--------------------------------------------------------------------------
+|  SignUp Api - Page where users signup
+|--------------------------------------------------------------------------
+*/
+router.post("/signup", (request, response) => {
+    
+});
 
 
 
