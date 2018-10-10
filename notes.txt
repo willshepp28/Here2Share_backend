@@ -7,3 +7,23 @@ https://www.primefaces.org/primeng/#/calendar
 // PostgreSQL tutorials 
 http://www.postgresqltutorial.com/
 
+
+// Testing Jest Supertest
+http://www.albertgao.xyz/2017/05/24/how-to-test-expressjs-with-jest-and-supertest/
+https://codeburst.io/revisiting-node-js-testing-part-2-14f50f8ddab5
+https://www.valentinog.com/blog/testing-api-koa-jest/
+https://www.youtube.com/watch?v=7r4xVDI2vho
+
+
+
+// Testing with Mocha
+https://hackernoon.com/api-testing-using-supertest-1f830ce838f1
+
+
+
+// learn
+https://www.terlici.com/2014/08/25/best-practices-express-structure.html
+
+
+// Site design
+https://dribbble.com/shots/5254140-Booking-Hotel-App-Clean-Minimalism

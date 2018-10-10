@@ -4,7 +4,7 @@
   "description": "a online platform where users can get paid to rent out their personal items",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'tests/apiTest.js'"
   },
   "author": "Will Sheppard",
   "license": "ISC",
@@ -19,5 +19,8 @@
     "moment": "^2.22.2",
     "morgan": "^1.9.1",
     "pg": "^7.5.0"
+  },
+  "devDependencies": {
+    "supertest": "^3.3.0"
   }
 }

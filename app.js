@@ -1,3 +1,8 @@
+/*
+ |--------------------------------------------------------------------------
+ | Require Dependencies
+ |--------------------------------------------------------------------------
+ */
 const express = require("express"),
     bodyParser = require("body-parser"),
     morgan = require("morgan"),
@@ -5,6 +10,10 @@ const express = require("express"),
     compression = require("compression"),
     cors = require("cors"),
     Api = require("./api/Api"),
+    AuthApi = require("./api/AuthApi"),
+    ProductApi = require("./api/ProductApi"),
+    CategoryApi = require("./api/CategoryApi"),
+    OrderApi = require("./api/OrderApi"),
     port = process.env.PORT || 3000;
 
 
@@ -43,12 +52,20 @@ require('dotenv').config();
 | Api
 |--------------------------------------------------------------------------
 */
+application.use("/ap/v1/order", OrderApi);
+application.use("/api/v1/auth", AuthApi);
+application.use("/api/v1/product", ProductApi);
+application.use("/api/v1/category", CategoryApi);
+// application.use("/ap/v1/order", OrderApi);
+
+
 application.use("/api/v1", Api);
 
 
 
 
 
-application.listen(port, () => {
+
+module.exports = application.listen(port, () => {
     console.log(`Port listening on port ${port}`);
 });
