@@ -43,7 +43,10 @@ router.post("/signup", (request, response) => {
         Passes the request.body to the checkLoginCredentials to make sure user actually send filled out inputs
         Then if the checkLoginCredentials function returns true, we send the request.body to the registerUser function to create a new user
     */
+
+    console.log(request.body);
     if(checkLoginCredentials(request.body)) {
+        console.log(true);
         registerUser(request.body)
             .then(token => response.status(200).json(token))
             .catch(error => response.status(400).json(error))
@@ -52,6 +55,8 @@ router.post("/signup", (request, response) => {
     else {
       response.status(400).json(false);
     }
+    
+
 });
 
 

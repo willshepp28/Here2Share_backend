@@ -19,14 +19,20 @@ module.exports = {
     // checks to see if user has correct info
     checkLoginCredentials: (credentials) => {
 
+        console.log("inside")
+        console.log(credentials.username)
+        console.log("inside")
+
         if (credentials.username &&
             credentials.email &&
             credentials.password &&
             credentials.phone_number) {
+                console.log(true)
             return true
         }
         else {
-            false;
+            console.log(false)
+            return false;
         }
     },
     // authenitcates user
@@ -55,6 +61,7 @@ module.exports = {
             })
     },
     registerUser: function (credentials) {
+       
         return knex("users")
             .insert({
                 username: credentials.username,
@@ -62,14 +69,12 @@ module.exports = {
                 password: encrypt(credentials.password),
                 phone_number: credentials.phone_number
             })
-            .returning('id')
+            .returning("*")
             .then(user => {
 
-                console.log(user);
 
                 let token = jwt.sign({ user }, process.env.JWT_SECRET)
                 let payload = jwt.verify(token, process.env.JWT_SECRET);
-                console.log(payload);
                 return true;
             })
             .catch(error => {
