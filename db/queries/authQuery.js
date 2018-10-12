@@ -19,10 +19,6 @@ module.exports = {
     // checks to see if user has correct info
     checkLoginCredentials: (credentials) => {
 
-        console.log("inside")
-        console.log(credentials.username)
-        console.log("inside")
-
         if (credentials.username &&
             credentials.email &&
             credentials.password &&
@@ -69,13 +65,9 @@ module.exports = {
                 password: encrypt(credentials.password),
                 phone_number: credentials.phone_number
             })
-            .returning("*")
-            .then(user => {
-
-
-                let token = jwt.sign({ user }, process.env.JWT_SECRET)
-                let payload = jwt.verify(token, process.env.JWT_SECRET);
-                return true;
+            .returning("id")
+            .then(id => {
+                return id;
             })
             .catch(error => {
                 return false;
